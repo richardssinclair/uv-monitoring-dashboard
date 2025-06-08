@@ -73,7 +73,7 @@ export default function Home() {
             setSelectedCity={setSelectedCity}
             locations={LOCATIONS}
           />
-          {uv && <UVChart data={getPastUV(uv.result)} />}
+          {uv && <UVChart data={uv.result} />}
           {/* Comment out other UVCurrent and UVImage and change testVal at top of this file */}
           {/* <UVCurrent value={testVal} /> */}
           {uv !== null && <UVCurrent value={getClosestUV(uv.result).uv} />}
