@@ -10,7 +10,7 @@ import { london, canterbury, lisbon, narobi } from "../lib/data";
 const LOCATIONS = ["London", "Canterbury", "Lisbon", "Nairobi"];
 
 // Added Mock Data flag to not max out API calls during development
-const useMockData = false;
+const useMockData = true;
 // Change values to 1, 4, 7, 11, 12 to test different UV index levels for UVImage and UVCurrent
 const testVal = '1';
 
