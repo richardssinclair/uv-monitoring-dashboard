@@ -12,7 +12,7 @@ const LOCATIONS = ["London", "Canterbury", "Lisbon", "Nairobi"];
 // Added Mock Data flag to not max out API calls during development
 const useMockData = process.env.MOCK_DATA;
 // Change values to 1, 4, 7, 11, 12 to test different UV index levels for UVImage and UVCurrent
-const testVal = '1';
+const testVal = "1";
 
 const mockUVData = {
   London: london[0],
@@ -66,6 +66,7 @@ export default function Home() {
 
   return (
     <main>
+      <h1 className="title">UV Dashboard</h1>
       <div className="container">
         <div className="col-one">
           <Dropdown

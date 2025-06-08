@@ -5,6 +5,14 @@
   margin: 0 auto;
 }
 
+.title {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .col-one {
   margin-bottom: 20px;
 }

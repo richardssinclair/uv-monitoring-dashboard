@@ -3,7 +3,7 @@ import styles from "./Dropdown.module.scss";
 const Dropdown = ({ selectedCity, setSelectedCity, locations }) => {
   return (
     <div className={styles.dropdownContainer}>
-      <h2>Choose a location</h2>
+      <p>Choose a location</p>
       <select
         className={styles.dropdown}
         value={selectedCity}

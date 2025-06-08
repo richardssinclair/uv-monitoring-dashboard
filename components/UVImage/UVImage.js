@@ -15,7 +15,12 @@ const UVImage = ({ value }) => {
     return "/vitaminD.png";
   }
 
-  const text = value >= 6 ? "Brolly time" : value >= 3 ? "Slap on some sun screen" : "Get some vitamin D mate";
+  const text =
+    value >= 6
+      ? "Brolly time"
+      : value >= 3
+      ? "Slap on some sun screen"
+      : "Get some vitamin D mate";
 
   const imageSrc = getUVImageSrc(value);
   const imageSrcFun = getUVImageFun(value);
@@ -28,13 +33,14 @@ const UVImage = ({ value }) => {
         src={imageSrc}
         alt={text}
       />
-      <p>{text}</p>
+      <p>Product Recomendations</p>
       <img
         data-testid="image-two"
         className={`${styles.image} ${styles.imagetwo}`}
         src={imageSrcFun}
         alt={text}
       />
+      <p>{text}</p>
     </div>
   );
 };
