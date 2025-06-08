@@ -5,9 +5,9 @@ const Dropdown = ({ selectedCity, setSelectedCity, locations }) => {
     <div className={styles.dropdownContainer}>
       <h2>Choose a location</h2>
       <select
+        className={styles.dropdown}
         value={selectedCity}
         onChange={(e) => setSelectedCity(e.target.value)}
-        style={{ width: "30%", padding: "8px" }}
         id="city-select"
       >
         <option value="">-- Select a city --</option>
@@ -19,6 +19,6 @@ const Dropdown = ({ selectedCity, setSelectedCity, locations }) => {
       </select>
     </div>
   );
-}
+};
 
 export default Dropdown;

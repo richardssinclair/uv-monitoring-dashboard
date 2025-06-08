@@ -33,6 +33,7 @@ const uvChart = ({ data }) => {
           <Line type="monotone" dataKey="uv" stroke="#8884d8" name="total uv" />
         </LineChart>
       </ResponsiveContainer>
+      <p className={styles.text}>Tracking the UV level from the past day</p>
     </div>
   );
 }
