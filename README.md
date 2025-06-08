@@ -1,37 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+##UV Monitoring Dashboard
 
-## Getting Started
+![Final image](public/final.png)
 
-First, run the development server:
+Technology used: - Next.js - React - Recharts - Javascript - React Test Library - Jest.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+To run the application use: ```yarn dev``` or ```npm run dev```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the Dashboard.
+
+To run the tests use: ```yarn test``` or ```npm run test```
+
+I used Next.js the framework for this application as I am quite comfortable using it and have built a few things with it in the past.
+
+In terms of API I tried using [OpenWeatherMap](https://openweathermap.org) as I noticed it had quite a vast amount of information. After a few attempts I realised that you have to pay for the oneCall service. 
+
+Having tried various things I ended up using their Geocoding API to decifer lat, lng and used [OpenUV](https://www.openuv.io/) to gather the UV Data.
+
+For Recharts I watched a bit of a tutorial from Web Dev Simplified as I hadn't used this library before. I was amazed at how little it took to get it running. Here is a link to the video if you are interested: [Recharts video](https://www.youtube.com/watch?v=15qMh8C1Wzo)
+
+For development purposes I set up some mock data which I copied from openuv as I was worried about hitting the 50 api call limit during development. You can manually change the day variable in lib/data.js to make it work correctly.
+
+I also added a basic feature switch ```useMockData``` for the api so you can choose whether to use the mock data or use the openuv api.
+
+I also left in a mock uv value ```testVal``` so you can manually change the images to see what happens when theres a higher UV. You will need to uncomment the following in: pages/index.js:
+
 ```
+{/* <UVCurrent value={testVal} /> */}
+{/* <UVImage value={testVal} /> */}
+```
+Make sure to comment out the others so it doesn't affect the layout.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For the initial design I had two components in mind which was the main graph and the drop down country selector.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+I ended up adding two more, one for the current uv raiting text under the graph and one for the two images one on the side.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Here is the final design I mocked up using Figma just as a basic layout:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+![Mock design](public/design.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Other Feature Ideas:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- App background colour changing based on UV level.
+- Sun animation changes based on UV level
+- Adding a UV level indiscation Bar from low to extreme
 
 ## Deploy on Vercel
 

@@ -1,0 +1,30 @@
+.UVImage {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.imageone {
+  max-width: 110px;
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
+  animation-timing-function: ease;
+}
+.imagetwo {
+  margin-top: 20px;
+  max-width: 150px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
