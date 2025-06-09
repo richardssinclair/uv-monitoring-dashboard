@@ -10,6 +10,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 To run the tests use: ```yarn test``` or ```npm run test```
 
+Here are some initial sketches for the application with the idea of having a Graph, Location Picker, Product Images and UV level.
+
+![Sketch image](public/sketches.jpeg)
+
+I ended up mocking it in Figma for Clarity:
+
+![Mock design](public/design.png)
+
 I used Next.js the framework for this application as I am quite comfortable using it and have built a few things with it in the past.
 
 In terms of API I tried using [OpenWeatherMap](https://openweathermap.org) as I noticed it had quite a vast amount of information. After a few attempts I realised that you have to pay for the oneCall service. 
@@ -33,10 +41,6 @@ Make sure to comment out the others so it doesn't affect the layout.
 For the initial design I had two components in mind which was the main graph and the drop down country selector.
 
 I ended up adding two more, one for the current uv raiting text under the graph and one for the two images one on the side.
-
-Here is the final design I mocked up using Figma just as a basic layout:
-
-![Mock design](public/design.png)
 
 Other Feature Ideas:
 
